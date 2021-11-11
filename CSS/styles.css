@@ -1,6 +1,6 @@
 .gridContainer {
     width: 960px;
-    background-color: blue;
+    background-color: wheat;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
 }
