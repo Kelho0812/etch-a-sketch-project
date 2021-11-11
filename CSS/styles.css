@@ -1,21 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    ". header header ."
+    "number main main button"
+    ". footer footer.";
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-content: space-around;    
+
 }
 
 footer {
     margin-top: 30px;
+    grid-area: footer;
+    justify-self: center;
 }
 
 .title {
     font-family: 'Lobster', cursive;
     font-size: 24px;
+    grid-area: header;
+    justify-self: center;
+}
+
+/* .middleSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+} */
+
+.buttonContainer {
+    grid-area: button;
+    justify-self: center;
+    align-self: center;
+}
+
+.numberContainer {
+    grid-area: number;
+    justify-self: center;
+    align-self: center;
 }
 
 .gridContainer {
+    grid-area: main;
+    justify-self: center;
     width: 600px;
     height: 600px;
     background-color: whitesmoke;
@@ -23,4 +55,6 @@ footer {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
     border: solid gray 5px;
+    border-radius: 8px;
 }
+

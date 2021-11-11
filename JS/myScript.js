@@ -1,8 +1,11 @@
 function colorPicker() {
-    let colorsArray = ['#edd3c4','#C8ADC0','#7765E3','#3B60E4','#080708',]
+    let colorsArray = ["#edd3c4", "#C8ADC0", "#7765E3", "#3B60E4", "#080708"];
     let randomColor =
         colorsArray[Math.floor(Math.random() * colorsArray.length)];
-    return randomColor;}
+    return randomColor;
+}
+
+
 
 function createGrid() {
     const gridContainer = document.querySelector(".gridContainer");
@@ -13,7 +16,7 @@ function createGrid() {
         gridSquares.style.height = "60px";
         // gridSquares.textContent = "Test";
         gridContainer.appendChild(gridSquares);
-        const gridzz = gridContainer.querySelectorAll('div')
+        const gridzz = gridContainer.querySelectorAll("div");
         gridzz.forEach((div) => {
             // and for each one we add a 'click' listener
             div.addEventListener("mouseenter", () => {
