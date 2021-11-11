@@ -6,7 +6,7 @@ function colorPicker() {
 
 function createGrid() {
     const gridContainer = document.querySelector(".gridContainer");
-    for (let i = 0; i < 256; i++) {
+    for (let i = 0; i < 100; i++) {
         const gridSquares = document.createElement("div");
         gridSquares.classList.add("gridSquares");
         gridSquares.style.width = "60px";
