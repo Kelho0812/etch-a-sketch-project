@@ -36,12 +36,14 @@ footer {
 
 .buttonContainer {
     grid-area: button;
+    width: 150px;
     justify-self: center;
     align-self: center;
 }
 
 .numberContainer {
     grid-area: number;
+    width: 150px;
     justify-self: center;
     align-self: center;
 }
