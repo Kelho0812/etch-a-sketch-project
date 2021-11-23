@@ -11,9 +11,9 @@ slider.oninput = function () {
 
 let button = document.querySelector(".button");
 button.addEventListener("click", () => {
-    clearGrid() //ENCONTRAR MANEIRA DE REMOVER TODOS OS DIVS ANTES DE CRIAR A GRID NOVA
-    createGrid()
-    paintGrid() 
+    clearGrid(); //ENCONTRAR MANEIRA DE REMOVER TODOS OS DIVS ANTES DE CRIAR A GRID NOVA
+    createGrid();
+    paintGrid();
 });
 
 function colorPicker() {
@@ -27,22 +27,20 @@ function createGrid(x) {
     let sliderValue = slider.value;
     console.log(sliderValue);
     gridContainer.style.gridTemplateRows =
-        'repeat(' + sliderValue + "," + 600 / sliderValue + 'px)';
+        "repeat(" + sliderValue + "," + 600 / sliderValue + "px)";
     gridContainer.style.gridTemplateColumns =
-    'repeat(' + sliderValue + "," + 600 / sliderValue + "px)";
+        "repeat(" + sliderValue + "," + 600 / sliderValue + "px)";
 
-    for (let i = 0; i < (sliderValue * sliderValue); i++) {
+    for (let i = 0; i < sliderValue * sliderValue; i++) {
         const gridSquares = document.createElement("div");
         gridSquares.classList.add("gridSquares");
-        gridSquares.setAttribute("id","gridSquares");
+        gridSquares.setAttribute("id", "gridSquares");
         gridSquares.style.width = 600 / sliderValue + "px";
         gridSquares.style.height = 600 / sliderValue + "px";
         // gridSquares.textContent = "Test";
         gridContainer.appendChild(gridSquares);
     }
 }
-
-
 
 function paintGrid() {
     const gridzz = gridContainer.querySelectorAll("div");
@@ -55,7 +53,7 @@ function paintGrid() {
 }
 
 function clearGrid() {
-    while(gridContainer.firstChild) {
+    while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
 }
