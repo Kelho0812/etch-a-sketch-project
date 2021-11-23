@@ -11,7 +11,7 @@ slider.oninput = function () {
 
 let button = document.querySelector(".button");
 button.addEventListener("click", () => {
-    // clearGrid() //ENCONTRAR MANEIRA DE REMOVER TODOS OS DIVS ANTES DE CRIAR A GRID NOVA
+    clearGrid() //ENCONTRAR MANEIRA DE REMOVER TODOS OS DIVS ANTES DE CRIAR A GRID NOVA
     createGrid()
     paintGrid() 
 });
@@ -54,9 +54,9 @@ function paintGrid() {
     });
 }
 
-// function clearGrid() {
-//     var elem = document.getElementById('gridSquares');
-//     elem.parentNode.removeChild(elem);
-//     return false;
-// }
+function clearGrid() {
+    while(gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+}
 // (window.onload = createGrid()), paintGrid();
